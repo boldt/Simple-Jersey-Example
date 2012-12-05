@@ -10,7 +10,12 @@ This project combines
 
 Import as Maven project in Eclipse. 
 
-Run the `JaxrsServer`. The first argument defines the Server. It can be `grizzly` or `netty`. The second argument is the port, which is 9999 by default.
+Run the `JaxrsServer`:
+
+* The first argument defines the Server. It can be `grizzly` or `netty`.
+* The second argument is the port, which is 9999 by default.
+
+Afterwards, open a resource:
 
 * [http://localhost:9999/users/1] (http://localhost:9999/users/1)
   * Should return an empty list: `[]`
@@ -20,6 +25,14 @@ Run the `JaxrsServer`. The first argument defines the Server. It can be `grizzly
 ### Known bugs
 
 `mvn package` produces a package with dependencies under `target`: `Jersey-Netty-Container-Example-0.0.1-SNAPSHOT.jar`
+
+Run as Netty server:
+
+* `java -jar target/Jersey-Netty-Container-Example-0.0.1-SNAPSHOT-jar-with-dependencies.jar netty 5000`
+
+Run as Grizzly server:
+
+* `java -jar target/Jersey-Netty-Container-Example-0.0.1-SNAPSHOT-jar-with-dependencies.jar grizzly 5000`
 
 Calling a ressource on the jar results in the following exception:
 
