@@ -14,6 +14,19 @@ Import as Maven project in Eclipse. Run the `JaxrsServer`. The first argument de
 * [http://localhost:9999/users/2] (http://localhost:9999/users/2)
   * Should return a list with an user: `[{"userId":100,"username":"test"}]`
 
+### Known bugs
+
+`mvn package` produces a package with dependencies under `target`:
+
+Run it: 
+
+* java -jar Jersey-Netty-Container-Example-0.0.1-SNAPSHOT.jar
+
+Calling a ressource gives the following exception:
+
+```
+Caused by: com.sun.jersey.api.MessageException: A message body writer for Java class java.util.ArrayList, and Java type java.util.List<de.dennis_boldt.User>, and MIME media type application/json was not found
+```
 ### Thanks to
 
 * [Gabriel Ciuloaica] (https://github.com/devsprint/jersey-netty-container)
