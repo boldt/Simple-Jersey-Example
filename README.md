@@ -9,11 +9,10 @@ This project combines
 
 Import as Maven project in Eclipse. Run the `JaxrsServer`. The first argument defines the port, which is 9999 by default.
 
-Open:
 * [http://localhost:9999/users/1] (http://localhost:9999/users/1)
-  * Sould return an empty list: `[]`
+  * Should return an empty list: `[]`
 * [http://localhost:9999/users/2] (http://localhost:9999/users/2)
-  * Sould return A list with an user: `[{"userId":100,"username":"test"}]`
+  * Should return a list with an user: `[{"userId":100,"username":"test"}]`
 
 ### Thanks to
 
