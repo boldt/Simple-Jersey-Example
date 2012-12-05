@@ -14,11 +14,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>io.netty</groupId>
-			<artifactId>netty</artifactId>
-			<version>3.5.8.Final</version>
-		</dependency>
-		<dependency>
 			<groupId>com.devsprint.jersey.api</groupId>
 			<artifactId>jersey-netty-container</artifactId>
 			<version>0.0.7-boldt-SNAPSHOT</version>
@@ -26,11 +21,6 @@
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-server</artifactId>
-			<version>1.9</version>
-		</dependency>
-		<dependency>
-			<groupId>com.sun.jersey.jersey-test-framework</groupId>
-			<artifactId>jersey-test-framework-http</artifactId>
 			<version>1.9</version>
 		</dependency>
 		<dependency>
