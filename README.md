@@ -16,13 +16,9 @@ Import as Maven project in Eclipse. Run the `JaxrsServer`. The first argument de
 
 ### Known bugs
 
-`mvn package` produces a package with dependencies under `target`:
+`mvn package` produces a package with dependencies under `target`: `Jersey-Netty-Container-Example-0.0.1-SNAPSHOT.jar`
 
-Run it: 
-
-* java -jar Jersey-Netty-Container-Example-0.0.1-SNAPSHOT.jar
-
-Calling a ressource gives the following exception:
+Calling a ressource on the jar results in the following exception:
 
 ```
 Caused by: com.sun.jersey.api.MessageException: A message body writer for Java class java.util.ArrayList, and Java type java.util.List<de.dennis_boldt.User>, and MIME media type application/json was not found
