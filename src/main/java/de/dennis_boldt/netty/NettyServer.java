@@ -1,4 +1,4 @@
-package de.dennis_boldt;
+package de.dennis_boldt.netty;
 import java.net.InetSocketAddress;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,11 +12,15 @@ import com.sun.jersey.api.container.ContainerFactory;
 import com.sun.jersey.api.core.PackagesResourceConfig;
 import com.sun.jersey.api.core.ResourceConfig;
 
+import de.dennis_boldt.Config;
 
 
-public class JaxrsServer {
 
-    public void start(Integer port) {
+public class NettyServer {
+
+    private String baseurl = null;
+
+    public NettyServer(Integer port) {
         // Configure the server
         ServerBootstrap bootstrap = new ServerBootstrap(
             new NioServerSocketChannelFactory(
@@ -24,19 +28,21 @@ public class JaxrsServer {
                     Executors.newCachedThreadPool()
             ));
 
-        bootstrap.setPipelineFactory(new JaxrsServerChannelPipelineFactory(getJerseyHandler(port)));
+        this.baseurl = Config.getBaseURL(port);
+
+        bootstrap.setPipelineFactory(new NettyServerChannelPipelineFactory(getJerseyHandler(port)));
         bootstrap.bind(new InetSocketAddress(port));
 
-        System.out.println("JAX-RS server started on port " + port);
+        System.out.println("Netty server started: " + baseurl);
     }
 
     private JerseyHandler getJerseyHandler(int port) {
 
-        final Map<String, Object> inti_params = new HashMap<String, Object>();
-        inti_params.put("com.devsprint.jersey.api.container.netty.baseUri", Config.getBaseURL(port));
-        inti_params.put("com.sun.jersey.config.property.packages", Config.JAXRS_RESOURCES);
-        inti_params.put("com.sun.jersey.api.json.POJOMappingFeature", "true");
-        ResourceConfig resourceConfig = new PackagesResourceConfig(inti_params);
+        final Map<String, Object> init_params = new HashMap<String, Object>();
+        init_params.put("com.devsprint.jersey.api.container.netty.baseUri", this.baseurl);
+        init_params.put("com.sun.jersey.config.property.packages", Config.JAXRS_RESOURCES);
+        init_params.put("com.sun.jersey.api.json.POJOMappingFeature", "true");
+        ResourceConfig resourceConfig = new PackagesResourceConfig(init_params);
 
         // Generate the Jersey handler
         return ContainerFactory.createContainer(JerseyHandler.class, resourceConfig);
@@ -49,7 +55,6 @@ public class JaxrsServer {
         } else {
             port = Config.PORT;
         }
-        JaxrsServer server = new JaxrsServer();
-        server.start(port);
+        new NettyServer(port);
     }
 }

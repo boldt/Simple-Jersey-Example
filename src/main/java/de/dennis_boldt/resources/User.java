@@ -1,4 +1,4 @@
-package de.dennis_boldt;
+package de.dennis_boldt.resources;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

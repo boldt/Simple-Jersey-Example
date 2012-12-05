@@ -5,12 +5,12 @@
 	<artifactId>Jersey-Netty-Container-Example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-    <repositories>
-        <repository>
-            <id>github.com/boldt</id>
-            <url>https://raw.github.com/boldt/maven/master/snapshots</url>
-        </repository>
-    </repositories>
+	<repositories>
+		<repository>
+			<id>github.com/boldt</id>
+			<url>https://raw.github.com/boldt/maven/master/snapshots</url>
+		</repository>
+	</repositories>
 
 	<dependencies>
 		<dependency>
@@ -21,12 +21,17 @@
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-server</artifactId>
-			<version>1.9</version>
+			<version>1.8</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-json</artifactId>
-			<version>1.9</version>
+			<version>1.8</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-grizzly2</artifactId>
+			<version>1.8</version>
 		</dependency>
 	</dependencies>
 
@@ -49,13 +54,12 @@
 					</descriptorRefs>
 					<archive>
 						<manifest>
-							<mainClass>de.dennis_boldt.JaxrsServer</mainClass>
+							<mainClass>de.dennis_boldt.Main</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
 				<executions>
 					<execution>
-						<id>make-assembly</id>
 						<phase>package</phase>
 						<goals>
 							<goal>single</goal>

@@ -1,4 +1,4 @@
-package de.dennis_boldt;
+package de.dennis_boldt.netty;
 
 import static org.jboss.netty.channel.Channels.pipeline;
 
@@ -10,12 +10,12 @@ import org.jboss.netty.handler.codec.http.HttpResponseEncoder;
 
 import com.devsprint.jersey.api.container.netty.JerseyHandler;
 
-public class JaxrsServerChannelPipelineFactory implements
+public class NettyServerChannelPipelineFactory implements
         ChannelPipelineFactory {
 
     private final transient JerseyHandler jerseyHandler;
 
-    public JaxrsServerChannelPipelineFactory(final JerseyHandler jerseyHandler) {
+    public NettyServerChannelPipelineFactory(final JerseyHandler jerseyHandler) {
         this.jerseyHandler = jerseyHandler;
     }
 

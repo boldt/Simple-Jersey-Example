@@ -1,4 +1,4 @@
-package de.dennis_boldt;
+package de.dennis_boldt.resources;
 
 import java.util.ArrayList;
 import java.util.List;

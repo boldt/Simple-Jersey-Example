@@ -1,13 +1,16 @@
 This project combines
 
 * [Netty] (http://netty.io/)
+* [Grizzly] (http://grizzly.java.net/)
 * [Jersey] (http://jersey.java.net/)
 * [JAXB (Java Architecture for XML Binding)](http://www.oracle.com/technetwork/articles/javase/index-140168.html)
 * [JSON] (http://www.ietf.org/rfc/rfc4627.txt)
 
 ### How to
 
-Import as Maven project in Eclipse. Run the `JaxrsServer`. The first argument defines the port, which is 9999 by default.
+Import as Maven project in Eclipse. 
+
+Run the `JaxrsServer`. The first argument defines the Server. It can be `grizzly` or `netty`. The second argument is the port, which is 9999 by default.
 
 * [http://localhost:9999/users/1] (http://localhost:9999/users/1)
   * Should return an empty list: `[]`
