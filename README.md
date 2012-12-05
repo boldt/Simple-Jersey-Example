@@ -15,4 +15,6 @@ Open:
 * http://localhost:9999/users/2
   * A list with an user: `[{"userId":100,"username":"test"}]`
 
+### Thanks to
 
+* [Gabriel Ciuloaica] (https://github.com/devsprint/jersey-netty-container)
