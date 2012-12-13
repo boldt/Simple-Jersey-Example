@@ -28,15 +28,15 @@ Run the `Main`:
 #### One-jar standalone
 
 Go to the project folder and run `mvn clean package`.
-The file `target/Simple-Jersey-Example-0.0.1-SNAPSHOT.jar` will be created
+The file `target/Simple-Jersey-Example-1.0.jar` will be created
 
 Run as Netty server on port 5000:
 
-* `java -jar target/Simple-Jersey-Example-0.0.1-SNAPSHOT.jar netty 5000`
+* `java -jar target/Simple-Jersey-Example-1.0.jar netty 5000`
 
 Run as Grizzly server on port 5000:
 
-* `java -jar target/Simple-Jersey-Example-0.0.1-SNAPSHOT.jar grizzly 5000`
+* `java -jar target/Simple-Jersey-Example-1.0.jar grizzly 5000`
 
 ### Test:
 
