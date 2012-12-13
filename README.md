@@ -41,12 +41,16 @@ Run as Grizzly server on port 5000:
 ### Test:
 
 * `curl -X GET curl -X GET http://localhost:5000/users/xml`
-  * Result:
-  ```<?xml version="1.0" encoding="UTF-8" standalone="yes"?><users><user><userId>100</userId><username>test</username></user></users>```
+  * ```<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <users>
+        <user>
+            <userId>100</userId>
+            <username>test</username>
+        </user>
+    </users>```
 
 * `curl -X GET curl -X GET http://localhost:5000/users/json`
-  * Result:
-  ```[{"username":"test","userId":100}]```
+  * ```[{"username":"test","userId":100}]```
 
 ### Thanks to
 
