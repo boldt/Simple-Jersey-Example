@@ -13,22 +13,21 @@ import javax.ws.rs.core.MediaType;
  */
 @Path("/users")
 public class UserResource {
-
     @GET
-    @Path("/1")
+    @Path("/json")
     @Produces({MediaType.APPLICATION_JSON})
-    public List<User> list1() {
-        List<User> users = new ArrayList<User>();
-        return users;
-    }
-
-    @GET
-    @Path("/2")
-    @Produces({MediaType.APPLICATION_JSON})
-    public List<User> list2() {
+    public List<User> json() {
         List<User> users = new ArrayList<User>();
         users.add(new User(100, "test"));
         return users;
     }
 
+    @GET
+    @Path("/xml")
+    @Produces({MediaType.APPLICATION_XML})
+    public List<User> xml() {
+        List<User> users = new ArrayList<User>();
+        users.add(new User(100, "test"));
+        return users;
+    }
 }
