@@ -17,7 +17,8 @@ This project uses
 
 #### Eclipse
 
-Import as Maven project.
+Import as Maven project with [Maven Integration (m2e)](http://eclipse.org/m2e/).
+
 
 Run the `Main`:
 
