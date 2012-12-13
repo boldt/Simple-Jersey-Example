@@ -32,25 +32,34 @@ The file `target/Simple-Jersey-Example-1.0.jar` will be created
 
 Run as Netty server on port 5000:
 
-* `java -jar target/Simple-Jersey-Example-1.0.jar netty 5000`
+  * `java -jar target/Simple-Jersey-Example-1.0.jar netty 5000`
 
 Run as Grizzly server on port 5000:
 
-* `java -jar target/Simple-Jersey-Example-1.0.jar grizzly 5000`
+  * `java -jar target/Simple-Jersey-Example-1.0.jar grizzly 5000`
 
 ### Test:
 
-* `curl -X GET curl -X GET http://localhost:5000/users/xml`
-  	<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-	    <users>
-	        <user>
-	            <userId>100</userId>
-	            <username>test</username>
-	        </user>
-	    </users>
+  * `curl -X GET curl -X GET http://localhost:5000/users/xml`
 
-* `curl -X GET curl -X GET http://localhost:5000/users/json`
-  	[{"username":"test","userId":100}]
+The result
+
+	<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+	<users>
+		<user>
+			<userId>100</userId>
+			<username>test</username>
+		</user>
+	</users>
+
+
+  * `curl -X GET curl -X GET http://localhost:5000/users/json`
+
+The result
+
+
+	[{"username":"test","userId":100}]
+
 
 ### Thanks to
 
