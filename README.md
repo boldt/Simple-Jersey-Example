@@ -64,3 +64,7 @@ The result
 ### Thanks to
 
 * [Gabriel Ciuloaica](https://github.com/devsprint) for the [jersey-netty-container] (https://github.com/devsprint/jersey-netty-container)
+
+### References
+
+* http://stackoverflow.com/questions/13842377
